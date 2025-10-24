@@ -1,22 +1,9 @@
-# Regression
 
-Overview: You are given a very simple dataframe with 3 variables w, x and y. You need to predict y, given w and x. 
-
-## Steps
-
-You should already know by now how to use pandas, load a dataframe, write a model/function, predict and visualize the outputs.
-
-## Data
-
-[Kaggle Dataset Link](https://kaggle.com/datasets/222808b5f956447e66f9b533b8010a214b1088c304aa20a28adc66f83877a9d2)
-
-## Submision
-Do all your solution stuff at the start, write a short story of what you did in that notebook. Add all the relevant notebooks in this folder.
-
-Submission will be checked thoroughly for fraudulent activities. If you were found guilty, then you will be executed.
-
-You will be found guilty if I think you used AI.
-
-## Story and Visualization of test results are mandatory
-
-<sup><sub>small secret once you finish the task if you know the inner meaning of w and x then only you actually completed the task</sub></sup>
+My objective for this task was to build a machine learning model to y, using w and x. The dataset was given in two parts training and test datasets.
+While reviewing the training data after downloading it from Kaggle, I realised that w is constant throughout the dataset. So I thought of performing feature importance after training it with w and x.
+I selected the Random Forest Regressor due to its high performance and accuracy. I couldn’t train the model on the complete dataset because my system was hanging, so I trained only on 50000 lines of data.
+Once the model was trained, I then started predicting y values for the test dataset. Here also I could predict only 50000 y since my system was hanging.
+I checked the model's feature importances attribute after it was trained. The result was:
+W = 0
+X = 1
+This shows that the model was trained only on X.
